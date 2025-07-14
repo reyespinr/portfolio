@@ -1,0 +1,398 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* VSCode Dark+ Theme Colors */
+    --bg-primary: #1e1e1e;
+    /* VSCode editor background */
+    --bg-secondary: #252526;
+    /* VSCode sidebar background */
+    --bg-tertiary: #2d2d30;
+    /* VSCode panel background */
+    --bg-hover: #323233;
+    /* VSCode hover background */
+
+    /* Syntax Highlighting Colors */
+    --syntax-keyword: #c586c0;
+    /* Purple - keywords (let, const, function) */
+    --syntax-string: #ce9178;
+    /* Orange - strings */
+    --syntax-function: #dcdcaa;
+    /* Yellow - function names */
+    --syntax-variable: #9cdcfe;
+    /* Light Blue - variables */
+    --syntax-comment: #6a9955;
+    /* Green - comments */
+    --syntax-number: #b5cea8;
+    /* Light Green - numbers */
+    --syntax-operator: #d4d4d4;
+    /* Light Gray - operators */
+
+    /* Terminal Colors */
+    --terminal-green: #4ec9b0;
+    /* Cyan/Teal */
+    --terminal-red: #f48771;
+    /* Coral Red */
+    --terminal-yellow: #dcdcaa;
+    /* Bright Yellow */
+    --terminal-blue: #569cd6;
+    /* Blue */
+    --terminal-magenta: #c586c0;
+    /* Magenta */
+
+    /* Text Colors */
+    --text-primary: #d4d4d4;
+    /* Main text - VSCode default */
+    --text-secondary: #cccccc;
+    /* Secondary text */
+    --text-muted: #969696;
+    /* Muted text */
+    --text-disabled: #6a6a6a;
+    /* Disabled text */
+
+    /* Accent Colors */
+    --accent-primary: #007acc;
+    /* VSCode Blue */
+    --accent-secondary: #0e639c;
+    /* Darker Blue */
+    --accent-success: #4ec9b0;
+    /* Success Green */
+    --accent-warning: #ffcc02;
+    /* Warning Yellow */
+    --accent-error: #f48771;
+    /* Error Red */
+
+    /* Border and Shadow */
+    --border-primary: #3e3e42;
+    /* VSCode border */
+    --border-secondary: #464647;
+    /* Lighter border */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+
+    /* Glass effect for overlays */
+    --glass-bg: rgba(37, 37, 38, 0.85);
+    --glass-border: rgba(62, 62, 66, 0.5);
+
+    /* Animation */
+    --transition-fast: all 0.15s ease;
+    --transition-normal: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Custom scrollbar - VSCode style */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-primary);
+    border-radius: 6px;
+    border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-secondary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 0.6s ease forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Utility classes */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 13px;
+    transition: var(--transition-fast);
+    border: 1px solid var(--border-primary);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-secondary);
+}
+
+.btn-primary:hover {
+    background: var(--accent-secondary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-secondary);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Text gradient utility - syntax highlighting inspired */
+.text-gradient {
+    background: linear-gradient(135deg, var(--syntax-function) 0%, var(--syntax-keyword) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section titles - IDE style */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--accent-primary);
+}
+
+/* Glass morphism cards */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+}
+
+/* Dark mode friendly form elements */
+input,
+textarea,
+select {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.2);
+}
+
+/* Code-inspired utility classes */
+.code-block {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 6px;
+    padding: 16px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+.syntax-keyword {
+    color: var(--syntax-keyword);
+}
+
+.syntax-string {
+    color: var(--syntax-string);
+}
+
+.syntax-function {
+    color: var(--syntax-function);
+}
+
+.syntax-variable {
+    color: var(--syntax-variable);
+}
+
+.syntax-comment {
+    color: var(--syntax-comment);
+}
+
+.syntax-number {
+    color: var(--syntax-number);
+}
+
+.syntax-operator {
+    color: var(--syntax-operator);
+}
+
+/* Terminal-style components */
+.terminal-window {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.terminal-header {
+    background: var(--bg-tertiary);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-dot.red {
+    background: #ff5f56;
+}
+
+.terminal-dot.yellow {
+    background: #ffbd2e;
+}
+
+.terminal-dot.green {
+    background: #27ca3f;
+}
+
+.terminal-content {
+    padding: 16px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--terminal-green);
+}
+
+/* IDE Panel styles */
+.ide-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ide-panel-header {
+    background: var(--bg-tertiary);
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.ide-panel-content {
+    padding: 20px;
+}

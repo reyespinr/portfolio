@@ -1,0 +1,323 @@
+.experience {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.experience .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--syntax-comment);
+    /* VS Code comment green */
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.code-editor-container {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.editor-header {
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-primary);
+    padding: 0;
+}
+
+.editor-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-primary);
+    color: #c9d1d9;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.editor-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-primary);
+}
+
+.file-icon {
+    filter: grayscale(1);
+}
+
+.modified {
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+.editor-content {
+    background: var(--bg-primary);
+    padding: 20px;
+}
+
+.timeline-entry {
+    display: block;
+    margin-bottom: 2rem;
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid var(--border-primary);
+    transition: all 0.3s ease;
+    position: relative;
+    background: var(--bg-secondary);
+}
+
+.timeline-entry.education {
+    border-left-color: var(--accent-primary);
+}
+
+.timeline-entry.research {
+    border-left-color: #7c3aed;
+}
+
+.timeline-entry.leadership {
+    border-left-color: #f97583;
+}
+
+.timeline-entry.project {
+    border-left-color: #85e89d;
+}
+
+.timeline-entry:hover {
+    background: var(--bg-hover);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-marker {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.timeline-icon {
+    color: var(--accent-primary);
+    font-size: 1.5rem;
+    background: var(--bg-primary);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+}
+
+.timeline-content {
+    overflow: hidden;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.timeline-title {
+    color: #c9d1d9;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.timeline-duration {
+    color: var(--accent-primary);
+    background: rgba(0, 122, 204, 0.1);
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.timeline-org {
+    color: var(--syntax-keyword);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.timeline-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-details li {
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bullet {
+    color: var(--accent-primary);
+    margin-right: 8px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 2rem;
+}
+
+.achievement-card {
+    background: var(--bg-secondary);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-primary);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #58a6ff, #7c3aed);
+}
+
+.achievement-card:hover {
+    background: #1c2128;
+    border-color: #58a6ff;
+    box-shadow: 0 8px 32px rgba(88, 166, 255, 0.2);
+}
+
+.achievement-icon {
+    color: #58a6ff;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.achievement-count {
+    color: #7c3aed;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.achievement-title {
+    color: #c9d1d9;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.achievement-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 60px 0;
+    }
+
+    .experience .section-title {
+        font-size: 2rem;
+    }
+
+    .editor-content {
+        flex-direction: column;
+    }
+
+    .line-numbers {
+        display: none;
+    }
+
+    .timeline-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-marker {
+        margin: 0 0 16px 0;
+        align-self: center;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    /* Fix: Center all timeline titles */
+    .timeline-title {
+        text-align: center !important;
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Fix: Center the date/duration bubble */
+    .timeline-duration {
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        float: none !important;
+    }
+
+    /* Fix: Left-align bullet points/details on mobile */
+    .timeline-details {
+        text-align: left !important;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+    }
+
+    .timeline-details li {
+        text-align: left !important;
+        justify-content: flex-start;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .achievement-card {
+        padding: 20px;
+    }
+}

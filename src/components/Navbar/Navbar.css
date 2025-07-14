@@ -1,0 +1,228 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-primary);
+    z-index: 1000;
+    padding: 0;
+    transition: var(--transition-fast);
+    font-family: 'Fira Code', monospace;
+    height: 64px;
+    /* Increased height */
+    min-height: 64px;
+}
+
+.navbar-scrolled {
+    background: var(--bg-tertiary);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    /* Decreased for more compact look */
+    font-size: 0.97rem;
+    /* Slightly smaller font */
+}
+
+.nav-logo h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    line-height: 1.2;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 13px;
+    position: relative;
+    padding: 8px 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: var(--transition-fast);
+    border-top: 2px solid transparent;
+    font-family: 'Fira Code', monospace;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+    border-top-color: var(--accent-primary);
+}
+
+.nav-link.active {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-top-color: var(--accent-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        min-width: 0;
+        max-width: 100vw;
+        height: 100vh;
+        background: var(--vscode-editor-background, #1e1e1e);
+        /* VS Code dark background */
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transition: var(--transition);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        z-index: 2000;
+    }
+
+    .nav-menu-active {
+        left: 0;
+    }
+
+    .nav-menu .nav-link {
+        color: #d4d4d4;
+        font-size: 2rem;
+        font-weight: 600;
+        background: none;
+        border-radius: 6px;
+        padding: 5vh 0 0 0;
+        /* More top, less bottom */
+        margin: 0;
+        border: 1.5px solid transparent;
+        transition: background 0.18s, color 0.18s, border 0.18s;
+        font-family: 'Fira Code', 'Consolas', monospace;
+        box-shadow: 0 2px 8px rgba(30, 30, 30, 0.08);
+        display: block;
+        width: 90vw;
+        max-width: 420px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.2;
+    }
+
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link.active {
+        background: var(--vscode-editorWidget-background, #23232b);
+        color: #fff;
+        border: 1.5px solid var(--accent-primary, #0078d4);
+        box-shadow: 0 4px 16px rgba(0, 120, 212, 0.10);
+    }
+
+    .nav-menu .nav-link::after {
+        background: var(--accent-primary, #0078d4);
+        opacity: 0.7;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 30%;
+        /* transform: translateY(-50%); */
+        z-index: 1001;
+    }
+
+    .nav-logo h2 {
+        font-size: 0.90rem;
+        /* word-break: break-all; */
+        /* max-width: 60vw; */
+        white-space: pre-line;
+        /* text-align: left; */
+        line-height: 1.2;
+        text-align: right !important;
+
+    }
+
+    .nav-container {
+        padding: 0 2px;
+        max-width: 99vw;
+        min-width: 0;
+        height: 44px;
+        font-size: 0.92rem;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1px;
+    }
+
+    .nav-logo h2 {
+        font-size: 0.9rem;
+        max-width: 85vw;
+    }
+}
+
+/* Python Syntax Highlighting for Navbar */
+.nav-logo .python-variable {
+    color: #9cdcfe;
+    /* Light blue for variables */
+}
+
+.nav-logo .python-operator {
+    color: #d4d4d4;
+    /* Light gray for operators */
+}
+
+.nav-logo .python-string {
+    color: #ce9178;
+    /* Orange/brown for strings */
+}
+
+.nav-logo .python-keyword {
+    color: #569cd6;
+    /* Blue for keywords like True */
+}
+
+.nav-logo .python-bracket {
+    color: #ffd700;
+    /* Gold/yellow for brackets */
+}

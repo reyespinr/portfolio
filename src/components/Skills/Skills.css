@@ -1,0 +1,247 @@
+.skills {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--syntax-comment);
+    /* VS Code comment green */
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.terminal-skills-container {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: var(--bg-tertiary);
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.terminal-title {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.prompt {
+    color: var(--accent-primary);
+    margin-right: 8px;
+}
+
+.command {
+    color: #f97583;
+}
+
+.skills-content {
+    padding: 24px;
+    background: var(--bg-primary);
+}
+
+.skill-category {
+    margin-bottom: 32px;
+}
+
+.category-title {
+    color: #c9d1d9;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-icon {
+    color: var(--accent-primary);
+    font-size: 0.8rem;
+}
+
+.category-skills {
+    display: grid;
+    gap: 16px;
+}
+
+.skill-item {
+    background: var(--bg-secondary);
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-primary);
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.skill-name {
+    color: #c9d1d9;
+    font-weight: 600;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+.skill-percentage {
+    color: var(--accent-primary);
+    font-weight: 700;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.progress-container {
+    position: relative;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, #764ba2 100%);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-blocks {
+    display: flex;
+    gap: 2px;
+    height: 6px;
+    margin-top: 8px;
+}
+
+.progress-blocks .block {
+    flex: 1;
+    background: var(--bg-tertiary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    opacity: 0.3;
+}
+
+.progress-blocks .block.filled {
+    background: var(--accent-primary);
+    box-shadow: 0 0 6px rgba(0, 122, 204, 0.4);
+    opacity: 1;
+}
+
+.progress-block {
+    flex: 1;
+    background: var(--bg-tertiary);
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.progress-block.filled {
+    background: var(--accent-primary);
+    box-shadow: 0 0 4px rgba(0, 122, 204, 0.4);
+}
+
+.installation-complete {
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.complete-message {
+    color: #85e89d;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.check-mark {
+    color: #85e89d;
+    font-weight: bold;
+}
+
+.system-info {
+    display: flex;
+    gap: 24px;
+    color: #8b949e;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.system-info span {
+    background: var(--bg-tertiary);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        padding: 60px 0;
+    }
+
+    .skills .section-title {
+        font-size: 2rem;
+    }
+
+    .skills-content {
+        padding: 20px;
+    }
+
+    .skill-category {
+        margin-bottom: 24px;
+    }
+
+    .category-title {
+        font-size: 1.1rem;
+    }
+
+    .skill-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .system-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .terminal-header {
+        padding: 12px 16px;
+    }
+
+    .terminal-title {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,378 @@
+.contact {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    position: relative;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    color: var(--syntax-comment);
+    /* VS Code comment green */
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+/* Terminal Section */
+.terminal-section {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background: var(--bg-secondary);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-secondary);
+    font-size: 0.9rem;
+}
+
+.terminal-icon {
+    color: var(--accent-primary);
+}
+
+.terminal-content {
+    padding: 20px;
+}
+
+.terminal-history {
+    margin-bottom: 16px;
+}
+
+.terminal-line {
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.terminal-line.command {
+    color: #c9d1d9;
+}
+
+.terminal-line.output {
+    color: #8b949e;
+    margin-left: 0;
+}
+
+.prompt {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.user {
+    color: var(--accent-secondary);
+}
+
+.separator {
+    color: #c9d1d9;
+}
+
+.path {
+    color: var(--accent-primary);
+}
+
+.dollar {
+    color: #c9d1d9;
+    margin-right: 8px;
+}
+
+.command-text {
+    color: #79c0ff;
+}
+
+.output-text {
+    color: #8b949e;
+}
+
+.contact-commands {
+    border-top: 1px solid var(--border-primary);
+    padding-top: 16px;
+}
+
+.command-section {
+    margin-bottom: 20px;
+}
+
+.command-section .section-title {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.command-section .section-title::after {
+    display: none;
+}
+
+.comment {
+    color: var(--syntax-comment);
+    text-decoration: none;
+    border: none;
+    border-bottom: none;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.method-command {
+    color: #79c0ff;
+    min-width: 140px;
+}
+
+.method-arrow {
+    color: var(--accent-secondary);
+}
+
+.method-value {
+    color: #a5d6ff;
+}
+
+.social-commands {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #79c0ff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.social-link:hover {
+    background: rgba(0, 122, 204, 0.1);
+    color: var(--accent-primary);
+}
+
+.social-icon {
+    color: var(--accent-secondary);
+}
+
+/* Form Section */
+.form-section {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    background: var(--bg-tertiary);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-header h3 {
+    margin: 0;
+    color: var(--accent-secondary);
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.contact-form {
+    padding: 20px;
+    background: var(--bg-primary);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group:last-of-type {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    font-weight: normal;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.1);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #6e7681;
+}
+
+.input-group textarea {
+    resize: none;
+    min-height: 300px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.submit-button {
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: #0078d4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.success-message {
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(46, 160, 67, 0.1);
+    border: 1px solid #238636;
+    border-radius: 6px;
+    color: #3fb950;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact .section-title {
+        font-size: 2rem;
+    }
+
+    .terminal-content {
+        padding: 16px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .method-command {
+        min-width: auto;
+    }
+
+    .contact-method {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .social-commands {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact .container {
+        padding: 0 16px;
+    }
+
+    .terminal-content {
+        padding: 12px;
+    }
+
+    .contact-form {
+        padding: 16px;
+    }
+
+    .submit-button {
+        padding: 12px 24px;
+    }
+}
