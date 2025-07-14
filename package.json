@@ -4,11 +4,14 @@
     "private": true,
     "description": "Nathan Reyes - React Portfolio",
     "main": "src/Index.js",
+    "homepage": "https://reyespinr.github.io/portfolio",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "framer-motion": "^10.16.4",
