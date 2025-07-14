@@ -162,7 +162,7 @@ const Contact = () => {
                       <FaGithub className="social-icon" />
                       <span>clone --github</span>
                     </a>
-                    <a href="/Nathan_Reyes_Resume.pdf" className="social-link" target="_blank" rel="noopener noreferrer">
+                    <a href={`${process.env.PUBLIC_URL}/Nathan_Reyes_Resume.pdf`} className="social-link" target="_blank" rel="noopener noreferrer">
                       <FaFilePdf className="social-icon" />
                       <span>download --resume</span>
                     </a>
