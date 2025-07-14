@@ -11,6 +11,8 @@
     height: 64px;
     /* Increased height */
     min-height: 64px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-scrolled {
@@ -21,14 +23,28 @@
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 8px 12px;
+    padding: 12px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 48px;
-    /* Decreased for more compact look */
     font-size: 0.97rem;
-    /* Slightly smaller font */
+    /* Make logo stick left and nav-menu stick right with growing gap */
+}
+
+.nav-logo {
+    flex: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0;
+    height: 100%;
 }
 
 .nav-logo h2 {
@@ -38,6 +54,36 @@
     color: var(--text-primary);
     font-family: 'Fira Code', monospace;
     line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* Hide long logo and show short logo on mobile */
+.nav-logo .logo-long {
+    display: inline;
+}
+
+.nav-logo .logo-short {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-logo .logo-long {
+        display: none;
+    }
+
+    .nav-logo .logo-short {
+        display: inline;
+    }
+
+    .nav-logo h2 {
+
+        margin-left: -10vw;
+    }
+
+    .hamburger {
+        margin-right: -12vw;
+        margin-top: -2vw
+    }
 }
 
 .nav-menu {

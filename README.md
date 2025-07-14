@@ -1,4 +1,4 @@
-# Nathan Reyes - React Portfolio
+# Nathan Reyes - Portfolio
 
 
 ## About Me

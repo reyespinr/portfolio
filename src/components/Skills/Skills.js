@@ -142,8 +142,10 @@ const Skills = () => {
         >
           <div className="terminal-header">
             <div className="terminal-title">
-              <span className="prompt">nathan@portfolio:~/skills$</span>
-              <span className="command">./install_skills.sh --progress</span>
+              <span className="prompt desktop-only">nathan@portfolio:~/skills$</span>
+              <span className="command desktop-only">./install_skills.sh --progress</span>
+              <span className="prompt mobile-only">nathan@skills$</span>
+              <span className="command mobile-only">./install.sh</span>
             </div>
           </div>
 

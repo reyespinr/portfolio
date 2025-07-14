@@ -494,8 +494,8 @@
     .hero-content {
         grid-template-columns: 1fr;
         gap: 3rem;
-        text-align: center;
-        padding: 0 15px;
+        /* text-align: center; */
+        padding: 10vw 15px;
     }
 
     .hero-text h1 {

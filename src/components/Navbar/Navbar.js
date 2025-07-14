@@ -55,17 +55,28 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <h2>
-            <span className="python-variable">nathan_reyes</span>
-            <span className="python-operator"> = </span>
-            <span className="python-bracket">{"{"}</span>
-            <span className="python-string">"role"</span>
-            <span className="python-operator">: </span>
-            <span className="python-string">"ai_engineer"</span>
-            <span className="python-operator">, </span>
-            <span className="python-string">"portfolio"</span>
-            <span className="python-operator">: </span>
-            <span className="python-keyword">True</span>
-            <span className="python-bracket">{"}"}</span>
+            <span className="logo-long">
+              <span className="python-variable">nathan_reyes</span>
+              <span className="python-operator"> = </span>
+              <span className="python-bracket">{"{"}</span>
+              <span className="python-string">"role"</span>
+              <span className="python-operator">: </span>
+              <span className="python-string">"ai_engineer"</span>
+              <span className="python-operator">, </span>
+              <span className="python-string">"portfolio"</span>
+              <span className="python-operator">: </span>
+              <span className="python-keyword">True</span>
+              <span className="python-bracket">{"}"}</span>
+            </span>
+            <span className="logo-short">
+              <span className="python-variable">nathan_reyes</span>
+              <span className="python-operator"> = </span>
+              <span className="python-bracket">{"{"}</span>
+              <span className="python-string">"role"</span>
+              <span className="python-operator">: </span>
+              <span className="python-string">"ai_engineer"</span>
+              <span className="python-bracket">{"}"}</span>
+            </span>
           </h2>
         </motion.div>
 

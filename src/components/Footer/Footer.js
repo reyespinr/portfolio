@@ -17,13 +17,7 @@ const Footer = () => {
           &copy; {currentYear} Nathan Reyes. All rights reserved.
         </motion.p>
         
-        <motion.div 
-          className="footer-gradient"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}
-        />
+        {/* Gradient removed as requested */}
       </div>
     </footer>
   );

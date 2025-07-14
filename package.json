@@ -2,7 +2,7 @@
     "name": "react-portfolio",
     "version": "1.0.0",
     "private": true,
-    "description": "Nathan Reyes - React Portfolio",
+    "description": "Nathan Reyes - Portfolio",
     "main": "src/Index.js",
     "homepage": "https://reyespinr.github.io/portfolio",
     "scripts": {
@@ -14,7 +14,7 @@
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
-        "framer-motion": "^10.16.4",
+        "framer-motion": "^10.18.0",
         "gh-pages": "^6.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

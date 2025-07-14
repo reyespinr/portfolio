@@ -1,6 +1,6 @@
 .footer {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+    color: var(--text-primary);
     padding: 2rem 0;
     text-align: center;
     position: relative;
@@ -19,18 +19,6 @@
     opacity: 0.9;
 }
 
-.footer-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.5),
-            transparent);
-    transform-origin: left;
-}
 
 /* Decorative elements */
 .footer::before {
